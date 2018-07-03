@@ -1,2 +1,2 @@
-# myworkflow
-I'm posting this here so that I can stop the Copy and Paste code in my workflow.
+# My Workflow
+I'm posting this here so I can stop Copy and Paste'ing code in my workflow.
