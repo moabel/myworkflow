@@ -1,0 +1,22 @@
+{
+    User: "Jon Doe",
+    lvl: "12",
+    exp: "34",
+    firehearts: "12",
+    chalenges: {
+        name: {
+            type: "type",
+            hp: "hp",
+            attack: "attack",
+            deadline: "day",
+            toDos:{"adf":"1","sdafsd":"0","dfasdf":"1","asdfas":"1","fasdf":"0","adfas":"0"}
+        },
+        name_2: {
+            type: "type",
+            hp: "hp",
+            attack: "attack",
+            deadline: "day",
+            toDos:{"adf":"1","sdafsd":"0","dfasdf":"1","asdfas":"1","fasdf":"0","adfas":"0"}
+            }
+    }
+}
