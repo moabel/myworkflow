@@ -19,7 +19,7 @@ function loadImages() {
 //             console.log(newe)
 //         }
 function whatch(targetNode){
-    var config = { attributes: true, childList: true, subtree: true };
+    var config = { childList: true };
     var ll=new MutationObserver(loadImages);
     ll.observe(targetNode, config);
 }
