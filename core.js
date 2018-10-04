@@ -18,8 +18,7 @@ function loadImages() {
 //             console.log(sup)
 //             console.log(newe)
 //         }
-function whatch(targetNode){
-    var config = { childList: true };
-    var ll=new MutationObserver(loadImages);
-    ll.observe(targetNode, config);
+function watch(targetNode){
+    var event=new MutationObserver(loadImages);
+    event.observe(targetNode, { childList: true });
 }
