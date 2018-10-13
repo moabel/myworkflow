@@ -1,24 +1,22 @@
-window.onload = loadImages;
-window.onresize = loadImages;
-altStyles=["gray"]
-function loadImages() {
-    document.querySelectorAll(".img").forEach((x) => {
-        var g="";
-        altStyles.forEach(y=>x.classList.contains(y)? g="g":null)
-        x.style.background = "tranparent";
-        var bgm = "https://picsum.photos/"+ g +"/" + x.offsetWidth + "/"+x.offsetHeight+ "/?random";
-        x.tagName=="IMG"?x.src=bgm:x.style.backgroundImage = "url("+bgm+")";
-    })
-}
-//         window.onclick = () => {
-//             console.clear()
-//             var sup = document.childNodes;
-//             var varr = "";
-//             //var newe = sup.forEach((xx)=>{varr += String(xx.nodelist)})
-//             console.log(sup)
-//             console.log(newe)
-//         }
-function watch(targetNode){
-    var event=new MutationObserver(loadImages);
-    event.observe(targetNode, { childList: true });
-}
+const myflow = (function(){
+	window.onload = loadImages;
+	window.addEventListener("resize", loadImages);
+	altStyles=["gray"];
+	//altStyles refere á tags com estilos diferentes, até agora só criei cinza mas o código é fácil de acrescentar mais outras com só uma linha de código
+	function loadImages() {
+		document.querySelectorAll(".img").forEach((x) => {
+			var g="";
+			if ( altStyles.forEach(y=>x.classList.contains(y) ) { g = "g" })
+			x.style.background = "tranparent";
+			//O uso de ""+"" foi escolhido ao invéz de ${} simplismente por ser mais compativel
+			var bgm = "https://picsum.photos/"+ g +"/" + x.offsetWidth + "/"+x.offsetHeight+ "/?random";
+			x.tagName == "IMG" ? x.src = bgm : x.style.backgroundImage = "url("+bgm+")";
+		})
+	}
+    return {
+        watch : function ( targetNode ) {
+        var event = new MutationObserver( loadImages );
+        event.observe( targetNode, { childList: true } );
+        }
+    }
+})()
