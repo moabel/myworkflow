@@ -1,4 +1,4 @@
-const myflow = (function(){
+const myFlow = (function(){
 	window.onload = loadImages;
 	window.addEventListener("resize", loadImages);
 	altStyles=["gray"];
