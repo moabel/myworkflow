@@ -1,23 +1,20 @@
 window.onload = loadImages;
 window.onresize = loadImages;
-altStyles=["gray"]
 function loadImages() {
-    document.querySelectorAll(".img").forEach((x) => {
-        var g="";
-        altStyles.forEach(y=>x.classList.contains(y)? g="g":null)
-        x.style.background = "tranparent";
-        var bgm = "https://picsum.photos/"+ g +"/" + x.offsetWidth + "/"+x.offsetHeight+ "/?random";
-        x.tagName=="IMG"?x.src=bgm:x.style.backgroundImage = "url("+bgm+")";
+    var valuess= "";
+    var altStyles= ["gray"];
+    var altSizeCounter= 1;
+    document.querySelectorAll(".img").forEach( ( imgClass ) => {
+        var g="", num  = "/?random";
+        if ( imgClass.classList.value.includes(...altStyles) ){ g = "g" }
+        var size = imgClass.offsetWidth + "/" + imgClass.offsetHeight + "";
+        valuess = [...valuess, size]
+        if ( valuess.includes(size) ){ num ="/?images=" + altSizeCounter++ }
+        imgClass.style.background = "tranparent";
+        var bgm = "https://picsum.photos/" + (g +"/") + size + num;
+        imgClass.tagName=="IMG"? imgClass.src = bgm : imgClass.style.backgroundImage = "url(" + bgm + ")";
     })
 }
-//         window.onclick = () => {
-//             console.clear()
-//             var sup = document.childNodes;
-//             var varr = "";
-//             //var newe = sup.forEach((xx)=>{varr += String(xx.nodelist)})
-//             console.log(sup)
-//             console.log(newe)
-//         }
 function watch(targetNode){
     var event=new MutationObserver(loadImages);
     event.observe(targetNode, { childList: true });
