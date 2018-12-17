@@ -15,7 +15,7 @@ When coding only include this tag to your HTML and everything will work just lik
 ## Just include this tag on your code
 Every image must have a .img class.
 ```
-<script src="https://cdn.rawgit.com/SupahJay/myworkflow/master/core.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/SupahJay/myworkflow@master/core.js"></script>
 ```
  | Feature | Usage | Notes |
  | ------- | ----- | - |
