@@ -9,8 +9,8 @@ When coding only include this tag to your HTML and everything will work just lik
 - DOM change observer that reloads/adds images whenever necessary
 
 ### More to come:
-[_] Dummy headlines and content generator
-[_] Non default options(not reload images on resize, defined sizes)
+- [ ] Dummy headlines and content generator
+- [ ] Non default options(not reload images on resize, defined sizes)
 
 ## Just include this tag on your code
 Every image must have a .img class.
